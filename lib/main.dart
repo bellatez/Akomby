@@ -1,4 +1,5 @@
 import 'package:Akombi/core/features/Onboarding/views/screens/onboarding_screen.dart';
+import 'package:Akombi/core/features/service_providers/views/screens/provider_listings.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-      home: const OnBoardingScreen()
+      // home: const OnBoardingScreen()
+      home: ProviderListings()
     );
   }
 }
