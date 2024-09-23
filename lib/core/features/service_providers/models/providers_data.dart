@@ -1,8 +1,196 @@
 import 'package:Akombi/core/features/service_providers/models/provider_model.dart';
 
 
-class ProvidersData {
+// class ProvidersData {
+//
+//   final serviceProviders = [
+//     ProviderModel(
+//       fullName: 'Marie Tchana',
+//       age: 29,
+//       quarter: 'Bastos',
+//       language: 'FR',
+//       stayOption: 'LiveIn',
+//       typeOfService: 'Maid',
+//       profilePhotoUrl: 'https://example.com/photos/marie_tchana.jpg',
+//     ),
+//     ProviderModel(
+//       fullName: 'Jeanette Nkem',
+//       age: 32,
+//       quarter: 'Melen',
+//       language: 'EN',
+//       stayOption: 'LiveOut',
+//       typeOfService: 'Nanny',
+//       profilePhotoUrl: 'https://example.com/photos/jeanette_nkem.jpg',
+//     ),
+//     ProviderModel(
+//       fullName: 'Pauline Mbida',
+//       age: 40,
+//       quarter: 'Etoudi',
+//       language: 'FR',
+//       stayOption: 'LiveIn',
+//       typeOfService: 'Maid',
+//       profilePhotoUrl: 'https://example.com/photos/pauline_mbida.jpg',
+//     ),
+//     ProviderModel(
+//       fullName: 'Rebecca Bonga',
+//       age: 24,
+//       quarter: 'Biyem-Assi',
+//       language: 'EN',
+//       stayOption: 'LiveOut',
+//       typeOfService: 'Nanny',
+//       profilePhotoUrl: 'https://example.com/photos/rebecca_bonga.jpg',
+//     ),
+//     ProviderModel(
+//       fullName: 'Chantal Fomene',
+//       age: 35,
+//       quarter: 'Ngousso',
+//       language: 'FR',
+//       stayOption: 'LiveIn',
+//       typeOfService: 'Maid',
+//       profilePhotoUrl: 'https://example.com/photos/chantal_fomene.jpg',
+//     ),
+//     ProviderModel(
+//       fullName: 'Esther Mbe',
+//       age: 28,
+//       quarter: 'Essos',
+//       language: 'EN',
+//       stayOption: 'LiveOut',
+//       typeOfService: 'Nanny',
+//       profilePhotoUrl: 'https://example.com/photos/esther_mbe.jpg',
+//     ),
+//     ProviderModel(
+//       fullName: 'Odile Ekane',
+//       age: 31,
+//       quarter: 'Ekounou',
+//       language: 'FR',
+//       stayOption: 'LiveIn',
+//       typeOfService: 'Maid',
+//       profilePhotoUrl: 'https://example.com/photos/odile_ekane.jpg',
+//     ),
+//     ProviderModel(
+//       fullName: 'Linda Ndon',
+//       age: 26,
+//       quarter: 'Mvan',
+//       language: 'EN',
+//       stayOption: 'LiveOut',
+//       typeOfService: 'Nanny',
+//       profilePhotoUrl: 'https://example.com/photos/linda_ndon.jpg',
+//     ),
+//     ProviderModel(
+//       fullName: 'Solange Zogo',
+//       age: 33,
+//       quarter: 'Obili',
+//       language: 'FR',
+//       stayOption: 'LiveIn',
+//       typeOfService: 'Maid',
+//       profilePhotoUrl: 'https://example.com/photos/solange_zogo.jpg',
+//     ),
+//     ProviderModel(
+//       fullName: 'Carine Foti',
+//       age: 27,
+//       quarter: 'Nkolbisson',
+//       language: 'EN',
+//       stayOption: 'LiveOut',
+//       typeOfService: 'Nanny',
+//       profilePhotoUrl: 'https://example.com/photos/carine_foti.jpg',
+//     ),
+//     ProviderModel(
+//       fullName: 'Florence Ekindi',
+//       age: 29,
+//       quarter: 'Simbock',
+//       language: 'FR',
+//       stayOption: 'LiveIn',
+//       typeOfService: 'Maid',
+//       profilePhotoUrl: 'https://example.com/photos/florence_ekindi.jpg',
+//     ),
+//     ProviderModel(
+//       fullName: 'Micheline Ndumbe',
+//       age: 34,
+//       quarter: 'Ngoa-Ekelle',
+//       language: 'EN',
+//       stayOption: 'LiveOut',
+//       typeOfService: 'Nanny',
+//       profilePhotoUrl: 'https://example.com/photos/micheline_ndumbe.jpg',
+//     ),
+//     ProviderModel(
+//       fullName: 'Jacqueline Muna',
+//       age: 38,
+//       quarter: 'Essos',
+//       language: 'FR',
+//       stayOption: 'LiveIn',
+//       typeOfService: 'Maid',
+//       profilePhotoUrl: 'https://example.com/photos/jacqueline_muna.jpg',
+//     ),
+//     ProviderModel(
+//       fullName: 'Suzanne Elanga',
+//       age: 23,
+//       quarter: 'Bastos',
+//       language: 'EN',
+//       stayOption: 'LiveOut',
+//       typeOfService: 'Nanny',
+//       profilePhotoUrl: 'https://example.com/photos/suzanne_elanga.jpg',
+//     ),
+//     ProviderModel(
+//       fullName: 'Clarisse Ombassa',
+//       age: 41,
+//       quarter: 'Ekounou',
+//       language: 'FR',
+//       stayOption: 'LiveIn',
+//       typeOfService: 'Maid',
+//       profilePhotoUrl: 'https://example.com/photos/clarisse_ombassa.jpg',
+//     ),
+//     ProviderModel(
+//       fullName: 'Valerie Nkodo',
+//       age: 36,
+//       quarter: 'Biyem-Assi',
+//       language: 'EN',
+//       stayOption: 'LiveOut',
+//       typeOfService: 'Nanny',
+//       profilePhotoUrl: 'https://example.com/photos/valerie_nkodo.jpg',
+//     ),
+//     ProviderModel(
+//       fullName: 'Agnes Epule',
+//       age: 28,
+//       quarter: 'Melen',
+//       language: 'FR',
+//       stayOption: 'LiveIn',
+//       typeOfService: 'Maid',
+//       profilePhotoUrl: 'https://example.com/photos/agnes_epule.jpg',
+//     ),
+//     ProviderModel(
+//       fullName: 'Lydia Biloa',
+//       age: 25,
+//       quarter: 'Ngousso',
+//       language: 'EN',
+//       stayOption: 'LiveOut',
+//       typeOfService: 'Nanny',
+//       profilePhotoUrl: 'https://example.com/photos/lydia_biloa.jpg',
+//     ),
+//     ProviderModel(
+//       fullName: 'Charlotte Ngo',
+//       age: 30,
+//       quarter: 'Etoudi',
+//       language: 'FR',
+//       stayOption: 'LiveIn',
+//       typeOfService: 'Maid',
+//       profilePhotoUrl: 'https://example.com/photos/charlotte_ngo.jpg',
+//     ),
+//     ProviderModel(
+//       fullName: 'Alice Moko',
+//       age: 32,
+//       quarter: 'Mvan',
+//       language: 'EN',
+//       stayOption: 'LiveOut',
+//       typeOfService: 'Nanny',
+//       profilePhotoUrl: 'https://example.com/photos/alice_moko.jpg',
+//     ),
+//   ];
+//
+// }
 
+
+
+class ProvidersData {
   final serviceProviders = [
     ProviderModel(
       fullName: 'Marie Tchana',
@@ -11,7 +199,7 @@ class ProvidersData {
       language: 'FR',
       stayOption: 'LiveIn',
       typeOfService: 'Maid',
-      profilePhotoUrl: 'https://example.com/photos/marie_tchana.jpg',
+      profilePhotoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/037/317/248/small_2x/ai-generated-african-american-baby-lying-on-a-bed-with-white-blankets-look-at-the-camera-top-view-health-care-and-happy-family-concept-generative-ai-photo.jpg',
     ),
     ProviderModel(
       fullName: 'Jeanette Nkem',
@@ -20,7 +208,7 @@ class ProvidersData {
       language: 'EN',
       stayOption: 'LiveOut',
       typeOfService: 'Nanny',
-      profilePhotoUrl: 'https://example.com/photos/jeanette_nkem.jpg',
+      profilePhotoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/037/317/248/small_2x/ai-generated-african-american-baby-lying-on-a-bed-with-white-blankets-look-at-the-camera-top-view-health-care-and-happy-family-concept-generative-ai-photo.jpg',
     ),
     ProviderModel(
       fullName: 'Pauline Mbida',
@@ -29,7 +217,7 @@ class ProvidersData {
       language: 'FR',
       stayOption: 'LiveIn',
       typeOfService: 'Maid',
-      profilePhotoUrl: 'https://example.com/photos/pauline_mbida.jpg',
+      profilePhotoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/037/317/248/small_2x/ai-generated-african-american-baby-lying-on-a-bed-with-white-blankets-look-at-the-camera-top-view-health-care-and-happy-family-concept-generative-ai-photo.jpg',
     ),
     ProviderModel(
       fullName: 'Rebecca Bonga',
@@ -38,7 +226,7 @@ class ProvidersData {
       language: 'EN',
       stayOption: 'LiveOut',
       typeOfService: 'Nanny',
-      profilePhotoUrl: 'https://example.com/photos/rebecca_bonga.jpg',
+      profilePhotoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/037/317/248/small_2x/ai-generated-african-american-baby-lying-on-a-bed-with-white-blankets-look-at-the-camera-top-view-health-care-and-happy-family-concept-generative-ai-photo.jpg',
     ),
     ProviderModel(
       fullName: 'Chantal Fomene',
@@ -47,7 +235,7 @@ class ProvidersData {
       language: 'FR',
       stayOption: 'LiveIn',
       typeOfService: 'Maid',
-      profilePhotoUrl: 'https://example.com/photos/chantal_fomene.jpg',
+      profilePhotoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/037/317/248/small_2x/ai-generated-african-american-baby-lying-on-a-bed-with-white-blankets-look-at-the-camera-top-view-health-care-and-happy-family-concept-generative-ai-photo.jpg',
     ),
     ProviderModel(
       fullName: 'Esther Mbe',
@@ -56,7 +244,7 @@ class ProvidersData {
       language: 'EN',
       stayOption: 'LiveOut',
       typeOfService: 'Nanny',
-      profilePhotoUrl: 'https://example.com/photos/esther_mbe.jpg',
+      profilePhotoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/037/317/248/small_2x/ai-generated-african-american-baby-lying-on-a-bed-with-white-blankets-look-at-the-camera-top-view-health-care-and-happy-family-concept-generative-ai-photo.jpg',
     ),
     ProviderModel(
       fullName: 'Odile Ekane',
@@ -65,7 +253,7 @@ class ProvidersData {
       language: 'FR',
       stayOption: 'LiveIn',
       typeOfService: 'Maid',
-      profilePhotoUrl: 'https://example.com/photos/odile_ekane.jpg',
+      profilePhotoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/037/317/248/small_2x/ai-generated-african-american-baby-lying-on-a-bed-with-white-blankets-look-at-the-camera-top-view-health-care-and-happy-family-concept-generative-ai-photo.jpg',
     ),
     ProviderModel(
       fullName: 'Linda Ndon',
@@ -74,7 +262,7 @@ class ProvidersData {
       language: 'EN',
       stayOption: 'LiveOut',
       typeOfService: 'Nanny',
-      profilePhotoUrl: 'https://example.com/photos/linda_ndon.jpg',
+      profilePhotoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/037/317/248/small_2x/ai-generated-african-american-baby-lying-on-a-bed-with-white-blankets-look-at-the-camera-top-view-health-care-and-happy-family-concept-generative-ai-photo.jpg',
     ),
     ProviderModel(
       fullName: 'Solange Zogo',
@@ -83,7 +271,7 @@ class ProvidersData {
       language: 'FR',
       stayOption: 'LiveIn',
       typeOfService: 'Maid',
-      profilePhotoUrl: 'https://example.com/photos/solange_zogo.jpg',
+      profilePhotoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/037/317/248/small_2x/ai-generated-african-american-baby-lying-on-a-bed-with-white-blankets-look-at-the-camera-top-view-health-care-and-happy-family-concept-generative-ai-photo.jpg',
     ),
     ProviderModel(
       fullName: 'Carine Foti',
@@ -92,7 +280,7 @@ class ProvidersData {
       language: 'EN',
       stayOption: 'LiveOut',
       typeOfService: 'Nanny',
-      profilePhotoUrl: 'https://example.com/photos/carine_foti.jpg',
+      profilePhotoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/037/317/248/small_2x/ai-generated-african-american-baby-lying-on-a-bed-with-white-blankets-look-at-the-camera-top-view-health-care-and-happy-family-concept-generative-ai-photo.jpg',
     ),
     ProviderModel(
       fullName: 'Florence Ekindi',
@@ -101,7 +289,7 @@ class ProvidersData {
       language: 'FR',
       stayOption: 'LiveIn',
       typeOfService: 'Maid',
-      profilePhotoUrl: 'https://example.com/photos/florence_ekindi.jpg',
+      profilePhotoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/037/317/248/small_2x/ai-generated-african-american-baby-lying-on-a-bed-with-white-blankets-look-at-the-camera-top-view-health-care-and-happy-family-concept-generative-ai-photo.jpg',
     ),
     ProviderModel(
       fullName: 'Micheline Ndumbe',
@@ -110,7 +298,7 @@ class ProvidersData {
       language: 'EN',
       stayOption: 'LiveOut',
       typeOfService: 'Nanny',
-      profilePhotoUrl: 'https://example.com/photos/micheline_ndumbe.jpg',
+      profilePhotoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/037/317/248/small_2x/ai-generated-african-american-baby-lying-on-a-bed-with-white-blankets-look-at-the-camera-top-view-health-care-and-happy-family-concept-generative-ai-photo.jpg',
     ),
     ProviderModel(
       fullName: 'Jacqueline Muna',
@@ -119,7 +307,7 @@ class ProvidersData {
       language: 'FR',
       stayOption: 'LiveIn',
       typeOfService: 'Maid',
-      profilePhotoUrl: 'https://example.com/photos/jacqueline_muna.jpg',
+      profilePhotoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/037/317/248/small_2x/ai-generated-african-american-baby-lying-on-a-bed-with-white-blankets-look-at-the-camera-top-view-health-care-and-happy-family-concept-generative-ai-photo.jpg',
     ),
     ProviderModel(
       fullName: 'Suzanne Elanga',
@@ -128,7 +316,7 @@ class ProvidersData {
       language: 'EN',
       stayOption: 'LiveOut',
       typeOfService: 'Nanny',
-      profilePhotoUrl: 'https://example.com/photos/suzanne_elanga.jpg',
+      profilePhotoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/037/317/248/small_2x/ai-generated-african-american-baby-lying-on-a-bed-with-white-blankets-look-at-the-camera-top-view-health-care-and-happy-family-concept-generative-ai-photo.jpg',
     ),
     ProviderModel(
       fullName: 'Clarisse Ombassa',
@@ -137,7 +325,7 @@ class ProvidersData {
       language: 'FR',
       stayOption: 'LiveIn',
       typeOfService: 'Maid',
-      profilePhotoUrl: 'https://example.com/photos/clarisse_ombassa.jpg',
+      profilePhotoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/037/317/248/small_2x/ai-generated-african-american-baby-lying-on-a-bed-with-white-blankets-look-at-the-camera-top-view-health-care-and-happy-family-concept-generative-ai-photo.jpg',
     ),
     ProviderModel(
       fullName: 'Valerie Nkodo',
@@ -146,7 +334,7 @@ class ProvidersData {
       language: 'EN',
       stayOption: 'LiveOut',
       typeOfService: 'Nanny',
-      profilePhotoUrl: 'https://example.com/photos/valerie_nkodo.jpg',
+      profilePhotoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/037/317/248/small_2x/ai-generated-african-american-baby-lying-on-a-bed-with-white-blankets-look-at-the-camera-top-view-health-care-and-happy-family-concept-generative-ai-photo.jpg',
     ),
     ProviderModel(
       fullName: 'Agnes Epule',
@@ -155,7 +343,7 @@ class ProvidersData {
       language: 'FR',
       stayOption: 'LiveIn',
       typeOfService: 'Maid',
-      profilePhotoUrl: 'https://example.com/photos/agnes_epule.jpg',
+      profilePhotoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/037/317/248/small_2x/ai-generated-african-american-baby-lying-on-a-bed-with-white-blankets-look-at-the-camera-top-view-health-care-and-happy-family-concept-generative-ai-photo.jpg',
     ),
     ProviderModel(
       fullName: 'Lydia Biloa',
@@ -164,7 +352,7 @@ class ProvidersData {
       language: 'EN',
       stayOption: 'LiveOut',
       typeOfService: 'Nanny',
-      profilePhotoUrl: 'https://example.com/photos/lydia_biloa.jpg',
+      profilePhotoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/037/317/248/small_2x/ai-generated-african-american-baby-lying-on-a-bed-with-white-blankets-look-at-the-camera-top-view-health-care-and-happy-family-concept-generative-ai-photo.jpg',
     ),
     ProviderModel(
       fullName: 'Charlotte Ngo',
@@ -173,7 +361,7 @@ class ProvidersData {
       language: 'FR',
       stayOption: 'LiveIn',
       typeOfService: 'Maid',
-      profilePhotoUrl: 'https://example.com/photos/charlotte_ngo.jpg',
+      profilePhotoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/037/317/248/small_2x/ai-generated-african-american-baby-lying-on-a-bed-with-white-blankets-look-at-the-camera-top-view-health-care-and-happy-family-concept-generative-ai-photo.jpg',
     ),
     ProviderModel(
       fullName: 'Alice Moko',
@@ -182,9 +370,10 @@ class ProvidersData {
       language: 'EN',
       stayOption: 'LiveOut',
       typeOfService: 'Nanny',
-      profilePhotoUrl: 'https://example.com/photos/alice_moko.jpg',
+      profilePhotoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/037/317/248/small_2x/ai-generated-african-american-baby-lying-on-a-bed-with-white-blankets-look-at-the-camera-top-view-health-care-and-happy-family-concept-generative-ai-photo.jpg',
     ),
   ];
-
 }
 
+
+// color: ColorConstants.armsColor,

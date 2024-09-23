@@ -18,6 +18,7 @@ class LocalKeys{
   static const String tOnboardingSubTitle3 = "tOnboardingSubTitle3";
   static const String serviceProviders = "serviceProviders";
   static const String changeLanguage = "changeLanguage";
+  static const String viewProfile ="viewProfile";
 }
 
 
@@ -31,7 +32,8 @@ class Locales{
     "tOnboardingSubTitle3": "Need some help with house chores? we have someone for you",
 
     "serviceProviders": "Service Providers",
-    "changeLanguage": "Change Language"
+    "changeLanguage": "Change Language",
+    "viewProfile": "View Profile",
 
 };
 
@@ -44,7 +46,8 @@ class Locales{
     "tOnboardingSubTitle3": "Besoin d'aide pour les tâches ménagères ? nous avons quelqu'un pour vous",
 
     "serviceProviders": "Fournisseurs de services",
-    "changeLanguage": ""
+    "changeLanguage": "",
+    "viewProfile": "Voir le profil",
   };
 
 }
