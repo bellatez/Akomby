@@ -5,14 +5,15 @@ class FitnessButton extends StatelessWidget {
   final String title;
   final bool isEnabled;
   final Function() onTap;
+  final double height;
 
-  FitnessButton({required this.title, this.isEnabled = true, required this.onTap});
+  FitnessButton({this.height = 55, required this.title, this.isEnabled = true, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 55,
+      height: height,
       decoration: BoxDecoration(
         color: isEnabled ? ColorConstants.tPrimaryColor : ColorConstants.disabledColor,
         borderRadius: BorderRadius.circular(100),

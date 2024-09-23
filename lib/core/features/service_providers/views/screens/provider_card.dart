@@ -1,7 +1,9 @@
 import 'package:Akombi/core/Utils/text_strings.dart';
+import 'package:Akombi/core/features/service_providers/views/screens/provider_card_profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../../common_widgets/fitness_button.dart';
 import '../../models/provider_model.dart';
 
 class ProviderCard extends StatelessWidget {
@@ -50,7 +52,7 @@ class ProviderCard extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                 ),
-                const SizedBox(height: 5,),
+                const SizedBox(height: 10,),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -63,13 +65,6 @@ class ProviderCard extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 8),
-                    Text(
-                      provider.quarter,
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        color: Colors.green,
-                      ),
-                    ),
                   ],
                 ),
                 const SizedBox(height: 5,),
@@ -77,18 +72,14 @@ class ProviderCard extends StatelessWidget {
                   alignment: Alignment.bottomCenter,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: OutlinedButton(
-                      style: OutlinedButton.styleFrom(
-                        side: BorderSide(color: Colors.blue),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                      ),
-                      onPressed: () {},
-                      child: Text(
-                        LocalKeys.viewProfile.tr,
-                        style: TextStyle(fontSize: 14),
-                      ),
+                    child: FitnessButton(
+                      height: 35,
+                      title: LocalKeys.viewProfile.tr,
+                      onTap: () {
+                        Navigator.push(context, 
+                        MaterialPageRoute(builder: (context) => ProviderProfilePage(provider: provider,)));
+                      },
+
                     ),
                   ),
                 ),
