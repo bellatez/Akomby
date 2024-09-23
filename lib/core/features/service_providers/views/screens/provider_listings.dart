@@ -1,5 +1,6 @@
 import 'package:Akombi/core/Utils/text_strings.dart';
 import 'package:Akombi/core/constants/colors.dart';
+import 'package:Akombi/core/features/service_providers/models/provider_model.dart';
 import 'package:Akombi/core/features/service_providers/models/providers_data.dart';
 import 'package:Akombi/core/features/service_providers/views/screens/provider_card.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,7 @@ class _ProviderListingsState extends State<ProviderListings>
     with SingleTickerProviderStateMixin {
   TabController? _serviceProviderTabController;
 
-  List providers = ProvidersData().serviceProviders;
+  List<ProviderModel> providers = ProvidersData().serviceProviders;
 
   @override
   void initState() {

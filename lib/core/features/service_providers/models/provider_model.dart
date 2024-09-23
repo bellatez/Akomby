@@ -7,6 +7,7 @@ class ProviderModel {
   String stayOption;
   String typeOfService;
   String profilePhotoUrl;
+  String description;
 
   ProviderModel({
     required this.fullName,
@@ -16,6 +17,7 @@ class ProviderModel {
     required this.stayOption,
     required this.typeOfService,
     required this.profilePhotoUrl,
+    required this. description,
   });
 
 }

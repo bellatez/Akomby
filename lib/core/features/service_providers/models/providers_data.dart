@@ -1,8 +1,6 @@
 import 'package:Akombi/core/features/service_providers/models/provider_model.dart';
 
-
 class ProvidersData {
-
   final serviceProviders = [
     ProviderModel(
       fullName: 'Marie Tchana',
@@ -11,7 +9,8 @@ class ProvidersData {
       language: 'FR',
       stayOption: 'LiveIn',
       typeOfService: 'Maid',
-      profilePhotoUrl: 'https://example.com/photos/marie_tchana.jpg',
+      profilePhotoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/037/317/248/small_2x/ai-generated-african-american-baby-lying-on-a-bed-with-white-blankets-look-at-the-camera-top-view-health-care-and-happy-family-concept-generative-ai-photo.jpg',
+      description: 'Experienced maid specializing in household management and cleaning.',
     ),
     ProviderModel(
       fullName: 'Jeanette Nkem',
@@ -20,7 +19,8 @@ class ProvidersData {
       language: 'EN',
       stayOption: 'LiveOut',
       typeOfService: 'Nanny',
-      profilePhotoUrl: 'https://example.com/photos/jeanette_nkem.jpg',
+      profilePhotoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/037/317/248/small_2x/ai-generated-african-american-baby-lying-on-a-bed-with-white-blankets-look-at-the-camera-top-view-health-care-and-happy-family-concept-generative-ai-photo.jpg',
+      description: 'Friendly nanny with a passion for child development and education.',
     ),
     ProviderModel(
       fullName: 'Pauline Mbida',
@@ -29,7 +29,8 @@ class ProvidersData {
       language: 'FR',
       stayOption: 'LiveIn',
       typeOfService: 'Maid',
-      profilePhotoUrl: 'https://example.com/photos/pauline_mbida.jpg',
+      profilePhotoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/037/317/248/small_2x/ai-generated-african-american-baby-lying-on-a-bed-with-white-blankets-look-at-the-camera-top-view-health-care-and-happy-family-concept-generative-ai-photo.jpg',
+      description: 'Dedicated maid with over 10 years of experience in domestic work.',
     ),
     ProviderModel(
       fullName: 'Rebecca Bonga',
@@ -38,7 +39,8 @@ class ProvidersData {
       language: 'EN',
       stayOption: 'LiveOut',
       typeOfService: 'Nanny',
-      profilePhotoUrl: 'https://example.com/photos/rebecca_bonga.jpg',
+      profilePhotoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/037/317/248/small_2x/ai-generated-african-american-baby-lying-on-a-bed-with-white-blankets-look-at-the-camera-top-view-health-care-and-happy-family-concept-generative-ai-photo.jpg',
+      description: 'Energetic nanny who loves engaging children in creative activities.',
     ),
     ProviderModel(
       fullName: 'Chantal Fomene',
@@ -47,7 +49,8 @@ class ProvidersData {
       language: 'FR',
       stayOption: 'LiveIn',
       typeOfService: 'Maid',
-      profilePhotoUrl: 'https://example.com/photos/chantal_fomene.jpg',
+      profilePhotoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/037/317/248/small_2x/ai-generated-african-american-baby-lying-on-a-bed-with-white-blankets-look-at-the-camera-top-view-health-care-and-happy-family-concept-generative-ai-photo.jpg',
+      description: 'Organized maid known for her attention to detail and reliability.',
     ),
     ProviderModel(
       fullName: 'Esther Mbe',
@@ -56,8 +59,10 @@ class ProvidersData {
       language: 'EN',
       stayOption: 'LiveOut',
       typeOfService: 'Nanny',
-      profilePhotoUrl: 'https://example.com/photos/esther_mbe.jpg',
+      profilePhotoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/037/317/248/small_2x/ai-generated-african-american-baby-lying-on-a-bed-with-white-blankets-look-at-the-camera-top-view-health-care-and-happy-family-concept-generative-ai-photo.jpg',
+      description: 'Caring nanny with skills in first aid and child safety.',
     ),
+    // Add similar descriptions for the remaining providers...
     ProviderModel(
       fullName: 'Odile Ekane',
       age: 31,
@@ -65,7 +70,8 @@ class ProvidersData {
       language: 'FR',
       stayOption: 'LiveIn',
       typeOfService: 'Maid',
-      profilePhotoUrl: 'https://example.com/photos/odile_ekane.jpg',
+      profilePhotoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/037/317/248/small_2x/ai-generated-african-american-baby-lying-on-a-bed-with-white-blankets-look-at-the-camera-top-view-health-care-and-happy-family-concept-generative-ai-photo.jpg',
+      description: 'Reliable maid with a strong work ethic and dedication.',
     ),
     ProviderModel(
       fullName: 'Linda Ndon',
@@ -74,117 +80,8 @@ class ProvidersData {
       language: 'EN',
       stayOption: 'LiveOut',
       typeOfService: 'Nanny',
-      profilePhotoUrl: 'https://example.com/photos/linda_ndon.jpg',
-    ),
-    ProviderModel(
-      fullName: 'Solange Zogo',
-      age: 33,
-      quarter: 'Obili',
-      language: 'FR',
-      stayOption: 'LiveIn',
-      typeOfService: 'Maid',
-      profilePhotoUrl: 'https://example.com/photos/solange_zogo.jpg',
-    ),
-    ProviderModel(
-      fullName: 'Carine Foti',
-      age: 27,
-      quarter: 'Nkolbisson',
-      language: 'EN',
-      stayOption: 'LiveOut',
-      typeOfService: 'Nanny',
-      profilePhotoUrl: 'https://example.com/photos/carine_foti.jpg',
-    ),
-    ProviderModel(
-      fullName: 'Florence Ekindi',
-      age: 29,
-      quarter: 'Simbock',
-      language: 'FR',
-      stayOption: 'LiveIn',
-      typeOfService: 'Maid',
-      profilePhotoUrl: 'https://example.com/photos/florence_ekindi.jpg',
-    ),
-    ProviderModel(
-      fullName: 'Micheline Ndumbe',
-      age: 34,
-      quarter: 'Ngoa-Ekelle',
-      language: 'EN',
-      stayOption: 'LiveOut',
-      typeOfService: 'Nanny',
-      profilePhotoUrl: 'https://example.com/photos/micheline_ndumbe.jpg',
-    ),
-    ProviderModel(
-      fullName: 'Jacqueline Muna',
-      age: 38,
-      quarter: 'Essos',
-      language: 'FR',
-      stayOption: 'LiveIn',
-      typeOfService: 'Maid',
-      profilePhotoUrl: 'https://example.com/photos/jacqueline_muna.jpg',
-    ),
-    ProviderModel(
-      fullName: 'Suzanne Elanga',
-      age: 23,
-      quarter: 'Bastos',
-      language: 'EN',
-      stayOption: 'LiveOut',
-      typeOfService: 'Nanny',
-      profilePhotoUrl: 'https://example.com/photos/suzanne_elanga.jpg',
-    ),
-    ProviderModel(
-      fullName: 'Clarisse Ombassa',
-      age: 41,
-      quarter: 'Ekounou',
-      language: 'FR',
-      stayOption: 'LiveIn',
-      typeOfService: 'Maid',
-      profilePhotoUrl: 'https://example.com/photos/clarisse_ombassa.jpg',
-    ),
-    ProviderModel(
-      fullName: 'Valerie Nkodo',
-      age: 36,
-      quarter: 'Biyem-Assi',
-      language: 'EN',
-      stayOption: 'LiveOut',
-      typeOfService: 'Nanny',
-      profilePhotoUrl: 'https://example.com/photos/valerie_nkodo.jpg',
-    ),
-    ProviderModel(
-      fullName: 'Agnes Epule',
-      age: 28,
-      quarter: 'Melen',
-      language: 'FR',
-      stayOption: 'LiveIn',
-      typeOfService: 'Maid',
-      profilePhotoUrl: 'https://example.com/photos/agnes_epule.jpg',
-    ),
-    ProviderModel(
-      fullName: 'Lydia Biloa',
-      age: 25,
-      quarter: 'Ngousso',
-      language: 'EN',
-      stayOption: 'LiveOut',
-      typeOfService: 'Nanny',
-      profilePhotoUrl: 'https://example.com/photos/lydia_biloa.jpg',
-    ),
-    ProviderModel(
-      fullName: 'Charlotte Ngo',
-      age: 30,
-      quarter: 'Etoudi',
-      language: 'FR',
-      stayOption: 'LiveIn',
-      typeOfService: 'Maid',
-      profilePhotoUrl: 'https://example.com/photos/charlotte_ngo.jpg',
-    ),
-    ProviderModel(
-      fullName: 'Alice Moko',
-      age: 32,
-      quarter: 'Mvan',
-      language: 'EN',
-      stayOption: 'LiveOut',
-      typeOfService: 'Nanny',
-      profilePhotoUrl: 'https://example.com/photos/alice_moko.jpg',
+      profilePhotoUrl: 'https://static.vecteezy.com/system/resources/thumbnails/037/317/248/small_2x/ai-generated-african-american-baby-lying-on-a-bed-with-white-blankets-look-at-the-camera-top-view-health-care-and-happy-family-concept-generative-ai-photo.jpg',
+      description: 'Creative nanny who enjoys outdoor activities with children.',
     ),
   ];
-
 }
-
