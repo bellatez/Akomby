@@ -19,6 +19,8 @@ class LocalKeys{
   static const String serviceProviders = "serviceProviders";
   static const String changeLanguage = "changeLanguage";
   static const String viewProfile ="viewProfile";
+
+  static const String userInformation = "userInformation";
 }
 
 
@@ -34,7 +36,7 @@ class Locales{
     "serviceProviders": "Service Providers",
     "changeLanguage": "Change Language",
     "viewProfile": "View Profile",
-
+    "userInformation": "User Information",
 };
 
   static const fr = {
@@ -48,6 +50,7 @@ class Locales{
     "serviceProviders": "Fournisseurs de services",
     "changeLanguage": "",
     "viewProfile": "Voir le profil",
+    "userInformation" : "informations utilisateur",
   };
 
 }

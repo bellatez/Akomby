@@ -1,5 +1,5 @@
 import 'package:Akombi/core/Utils/text_strings.dart';
-import 'package:Akombi/core/features/service_providers/views/screens/provider_card_profile_page.dart';
+import 'package:Akombi/core/features/service_providers/views/screens/profile/provider_card_profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
