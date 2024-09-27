@@ -1,6 +1,9 @@
+import 'package:Akombi/core/features/service_providers/views/screens/profile/about.dart';
+import 'package:Akombi/core/features/service_providers/views/screens/profile/reviews.dart';
+import 'package:Akombi/core/features/service_providers/views/screens/profile/services.dart';
 import 'package:flutter/material.dart';
-import '../../../../constants/colors.dart';
-import '../../models/provider_model.dart';
+import '../../../../../constants/colors.dart';
+import '../../../models/provider_model.dart';
 
 class ProviderProfilePage extends StatelessWidget {
   final ProviderModel provider;
@@ -74,11 +77,17 @@ class ProviderProfilePage extends StatelessWidget {
               ),
               const SizedBox(height: 20),
 
-              // Move TabBar here
+              // Customized TabBar without the full horizontal line
               TabBar(
                 labelColor: ColorConstants.armsColor,
                 unselectedLabelColor: Colors.grey,
-                indicatorColor: ColorConstants.armsColor,
+                indicator: UnderlineTabIndicator( // Customize the indicator
+                  borderSide: BorderSide(
+                    width: 2.0, // Adjust width of the indicator
+                    color: ColorConstants.armsColor, // Indicator color
+                  ),
+                  insets: EdgeInsets.symmetric(horizontal: 30.0), // Adjust horizontal padding
+                ),
                 tabs: const [
                   Tab(text: "About"),
                   Tab(text: "Services"),
@@ -92,27 +101,9 @@ class ProviderProfilePage extends StatelessWidget {
               Expanded(
                 child: TabBarView(
                   children: [
-                    // About tab content
-                    Center(
-                      child: Text(
-                        "About ${provider.fullName}",
-                        style: TextStyle(fontSize: 18),
-                      ),
-                    ),
-                    // Services tab content
-                    Center(
-                      child: Text(
-                        "${provider.fullName}'s Services",
-                        style: TextStyle(fontSize: 18),
-                      ),
-                    ),
-                    // Reviews tab content
-                    Center(
-                      child: Text(
-                        "Reviews for ${provider.fullName}",
-                        style: TextStyle(fontSize: 18),
-                      ),
-                    ),
+                    About(provider: provider),
+                    Services(),
+                    Reviews(),
                   ],
                 ),
               ),
