@@ -21,6 +21,10 @@ class LocalKeys{
   static const String viewProfile ="viewProfile";
 
   static const String userInformation = "userInformation";
+  static const String payment = "payment";
+  static const String unlockPayment = "unlockPayment";
+  static const String enterPhoneNumber = "enterPhoneNumber";
+  static const String confirmPayment = "confirmPayment";
 }
 
 
@@ -37,6 +41,11 @@ class Locales{
     "changeLanguage": "Change Language",
     "viewProfile": "View Profile",
     "userInformation": "User Information",
+
+    "payment": "Payment Page",
+    "unlockPayment": "To unlock contact details, you need to pay:",
+    "enterPhoneNumber": "Enter your phone number",
+    "confirmPayment": "Confirm Payment",
 };
 
   static const fr = {
@@ -51,6 +60,11 @@ class Locales{
     "changeLanguage": "",
     "viewProfile": "Voir le profil",
     "userInformation" : "informations utilisateur",
+
+    "payment": "Page de paiement",
+    "unlockPayment": "Pour débloquer les coordonnées, vous devez payer:",
+    "enterPhoneNumber": "Entrez votre numéro de téléphone",
+    "confirmPayment": "Confirmer le paiement",
   };
 
 }
