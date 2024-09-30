@@ -1,4 +1,5 @@
 import 'package:Akombi/core/Utils/text_strings.dart';
+import 'package:Akombi/core/features/authentication/sign_up/page/sign_up_page.dart';
 import 'package:Akombi/core/features/service_providers/views/screens/profile/provider_card_profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -76,8 +77,9 @@ class ProviderCard extends StatelessWidget {
                       height: 35,
                       title: LocalKeys.viewProfile.tr,
                       onTap: () {
-                        Navigator.push(context, 
-                        MaterialPageRoute(builder: (context) => ProviderProfilePage(provider: provider,)));
+                        Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => SignUpPage()));
+                        // MaterialPageRoute(builder: (context) => ProviderProfilePage(provider: provider,)));
                       },
 
                     ),
