@@ -8,7 +8,7 @@ import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get_storage/get_storage.dart';
 
-import 'core/features/service_providers/views/screens/payments.dart';
+import 'core/features/payments/screens/payments.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,8 +32,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      // home: const OnBoardingScreen()
-      home: PaymentPage(),
+      home: const OnBoardingScreen()
+      // home: ProviderListings(),
     );
   }
 }

@@ -1,3 +1,4 @@
+import 'package:Akombi/core/features/service_providers/views/screens/provider_listings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -25,7 +26,7 @@ class OnBoardingScreen extends StatelessWidget {
           Navigator.of(context).pushReplacement(
             MaterialPageRoute(
               builder: (_) {
-                return SignUpPage();
+                return ProviderListings();
               },
             ),
           );

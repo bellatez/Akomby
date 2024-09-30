@@ -1,11 +1,34 @@
+import 'package:Akombi/core/common_widgets/fitness_button.dart';
+import 'package:Akombi/core/features/payments/screens/payments.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SignUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-        body: Text('hello there')
+    return Scaffold(
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+             const Text('hello there'),
+            Align(
+              alignment: Alignment.center,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: FitnessButton(
+                  height: 35,
+                  title: 'Sign Up',
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => PaymentPage()));
+                    // MaterialPageRoute(builder: (context) => ProviderProfilePage(provider: provider,)));
+                  },
+
+                ),
+              ),
+            ),
+          ],
+        )
     );
   }
 
