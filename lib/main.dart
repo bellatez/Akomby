@@ -8,6 +8,8 @@ import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get_storage/get_storage.dart';
 
+import 'core/features/service_providers/views/screens/payments.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
@@ -31,7 +33,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: const OnBoardingScreen()
-      home: ProviderListings(),
+      home: PaymentPage(),
     );
   }
 }
