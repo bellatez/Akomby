@@ -27,6 +27,9 @@ class LocalKeys{
   static const String enterPhoneNumber = "enterPhoneNumber";
   static const String confirmPayment = "confirmPayment";
   static const String selectPaymentMethod = "selectPaymentMethod";
+  static const String viewProfileDetails  = "viewProfileDetails";
+  static const String iAm = "iAm";
+  static const String iLiveIn = "iLiveIn";
 }
 
 
@@ -49,6 +52,9 @@ class Locales{
     "enterPhoneNumber": "Enter your phone number",
     "confirmPayment": "Confirm Payment",
     "selectPaymentMethod": "Select your payment method",
+    "viewProfileDetails": "View profile details",
+    "iAm": "I am",
+    "iLiveIn": "I live in",
 };
 
   static const fr = {
@@ -69,7 +75,10 @@ class Locales{
     "enterPhoneNumber": "Entrez votre numéro de téléphone",
     "confirmPayment": "Confirmer le paiement",
 
-    "selectPaymentMethod": "sélectionnez la méthode de paiement"
+    "selectPaymentMethod": "sélectionnez la méthode de paiement",
+    "viewProfileDetails": "Afficher les détails du profil",
+    "iAm": "Je suis",
+    "iLiveIn": "je vis dans",
   };
 
 }

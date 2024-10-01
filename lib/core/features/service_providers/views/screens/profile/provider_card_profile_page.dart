@@ -16,7 +16,7 @@ class ProviderProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3, // Number of tabs
+      length: 2, // Number of tabs
       child: Scaffold(
         appBar: AppBar(
           iconTheme: IconThemeData(color: Colors.black),
@@ -91,7 +91,6 @@ class ProviderProfilePage extends StatelessWidget {
                 tabs: const [
                   Tab(text: "About"),
                   Tab(text: "Services"),
-                  Tab(text: "Reviews"),
                 ],
               ),
 
@@ -103,7 +102,6 @@ class ProviderProfilePage extends StatelessWidget {
                   children: [
                     About(provider: provider),
                     Services(),
-                    Reviews(),
                   ],
                 ),
               ),
