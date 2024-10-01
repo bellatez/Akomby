@@ -24,7 +24,7 @@ class ProviderProfilePage extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.only(right: 82.0),
               child: Text(
-                'Profile',
+                'Profil',
                 style: TextStyle(
                   color: ColorConstants.armsColor,
                   fontSize: 25,
