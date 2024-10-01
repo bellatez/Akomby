@@ -1,25 +1,28 @@
+import 'package:get/get.dart';
+
+import '../../../Utils/text_strings.dart';
 import '../views/widgets/onboarding_tile.dart';
 import '../../../constants/image_strings.dart';
 import '../../../constants/text_strings.dart';
 
 class DataConstants {
   static final pages = [
-      const OnboardingTileWidget(
+      OnboardingTileWidget(
         image: tOnboardingImage1,
-        title: tOnboardingTitle1,
-        subTitle: tOnboardingSubTitle1,
+        title: LocalKeys.tOnboardingSubTitle1.tr,
+        subTitle: LocalKeys.tOnboardingSubTitle1.tr,
       ),
 
-      const OnboardingTileWidget(
+      OnboardingTileWidget(
         image: tOnboardingImage2,
-        title: tOnboardingTitle2,
-        subTitle: tOnboardingSubTitle2,
+        title: LocalKeys.tOnboardingTitle2.tr,
+        subTitle: LocalKeys.tOnboardingSubTitle2.tr,
       ),
 
-      const OnboardingTileWidget(
+      OnboardingTileWidget(
         image: tOnboardingImage3,
-        title: tOnboardingTitle3,
-        subTitle: tOnboardingSubTitle3,
+        title: LocalKeys.tOnboardingTitle3.tr,
+        subTitle: LocalKeys.tOnboardingSubTitle3.tr,
       ),
   ];
 }

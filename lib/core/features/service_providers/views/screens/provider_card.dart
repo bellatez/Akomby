@@ -19,77 +19,202 @@ class ProviderCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Wrap(
-        direction: Axis.horizontal,
-        spacing: 10.0,
-        runSpacing: 10.0,
-        children: providers.map((provider) {
-          return Container(
-            margin: const EdgeInsets.all(8.0),
-            height: MediaQuery.of(context).size.height * 0.35,
-            width: MediaQuery.of(context).size.width * 0.42,
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.blue, width: 2.0),
-              borderRadius: BorderRadius.circular(12),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.withOpacity(0.5),
-                  spreadRadius: 2,
-                  blurRadius: 7,
-                  offset: Offset(0, 3), // changes position of shadow
-                ),
-              ],
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
+    final List<ProviderModel> providers = [
+      ProviderModel(
+        fullName: "Marie Ndumbe",
+        age: 45,
+        quarter: "Biyem-Assi, Yaoundé",
+        language: "French, English",
+        stayOption: "Any/Flexible",
+        typeOfService: "Maid",
+        profilePhotoUrl: 'assets/profile_image.png', // Replace with your image path
+        description: "Experienced maid with over 15 years in household management.",
+        yearsOfExperience: 15,
+        homesWorked: 10,
+        hasNationalID: true,
+      ),
+      ProviderModel(
+        fullName: "Jean-Pierre Nguemo",
+        age: 32,
+        quarter: "Akwa, Douala",
+        language: "French, English",
+        stayOption: "Short-term",
+        typeOfService: "Driver",
+        profilePhotoUrl: 'assets/profile_image.png',
+        description: "Reliable driver with a clean driving record.",
+        yearsOfExperience: 8,
+        homesWorked: 5,
+        hasNationalID: true,
+      ),
+      ProviderModel(
+        fullName: "Amina Mouafo",
+        age: 28,
+        quarter: "Mokolo, Garoua",
+        language: "French, English",
+        stayOption: "Long-term",
+        typeOfService: "Nanny",
+        profilePhotoUrl: 'assets/profile_image.png',
+        description: "Caring nanny with a passion for children.",
+        yearsOfExperience: 6,
+        homesWorked: 4,
+        hasNationalID: false,
+      ),
+      ProviderModel(
+        fullName: "Samuel Nguiffo",
+        age: 40,
+        quarter: "Bamenda",
+        language: "English, Pidgin",
+        stayOption: "Any/Flexible",
+        typeOfService: "Cook",
+        profilePhotoUrl: 'assets/profile_image.png',
+        description: "Professional cook specializing in local and continental cuisine.",
+        yearsOfExperience: 12,
+        homesWorked: 7,
+        hasNationalID: true,
+      ),
+      ProviderModel(
+        fullName: "Clara Fongang",
+        age: 35,
+        quarter: "Ngoundéré",
+        language: "French, English",
+        stayOption: "Short-term",
+        typeOfService: "Housekeeper",
+        profilePhotoUrl: 'assets/profile_image.png',
+        description: "Detail-oriented housekeeper with great references.",
+        yearsOfExperience: 10,
+        homesWorked: 5,
+        hasNationalID: true,
+      ),
+      ProviderModel(
+        fullName: "Felix Tchatchouang",
+        age: 50,
+        quarter: "Limbe",
+        language: "English, French",
+        stayOption: "Any/Flexible",
+        typeOfService: "Gardener",
+        profilePhotoUrl: 'assets/profile_image.png',
+        description: "Experienced gardener with knowledge of local flora.",
+        yearsOfExperience: 15,
+        homesWorked: 8,
+        hasNationalID: true,
+      ),
+      ProviderModel(
+        fullName: "Nadia Abou",
+        age: 29,
+        quarter: "Yaoundé",
+        language: "French, English",
+        stayOption: "Long-term",
+        typeOfService: "Companion",
+        profilePhotoUrl: 'assets/profile_image.png',
+        description: "Compassionate companion providing support and care.",
+        yearsOfExperience: 4,
+        homesWorked: 3,
+        hasNationalID: false,
+      ),
+      ProviderModel(
+        fullName: "Lucien Tchoupa",
+        age: 37,
+        quarter: "Douala",
+        language: "French, English",
+        stayOption: "Any/Flexible",
+        typeOfService: "Maintenance Worker",
+        profilePhotoUrl: 'assets/profile_image.png',
+        description: "Handyman skilled in various repairs and maintenance.",
+        yearsOfExperience: 10,
+        homesWorked: 6,
+        hasNationalID: true,
+      ),
+      ProviderModel(
+        fullName: "Esther Ngwa",
+        age: 33,
+        quarter: "Bafoussam",
+        language: "French, English",
+        stayOption: "Short-term",
+        typeOfService: "Pet Sitter",
+        profilePhotoUrl: 'assets/profile_image.png',
+        description: "Loving pet sitter with experience in caring for dogs and cats.",
+        yearsOfExperience: 5,
+        homesWorked: 3,
+        hasNationalID: false,
+      ),
+      ProviderModel(
+        fullName: "Pauline Mvondo",
+        age: 48,
+        quarter: "Ebolowa",
+        language: "French, English",
+        stayOption: "Any/Flexible",
+        typeOfService: "Personal Assistant",
+        profilePhotoUrl: 'assets/profile_image.png',
+        description: "Organized personal assistant with excellent communication skills.",
+        yearsOfExperience: 20,
+        homesWorked: 15,
+        hasNationalID: true,
+      ),
+    ];
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 5.0),
+      child: Card(
+        child: Container(
+          width: double.infinity,
+          height: 240,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10), // Applying the border radius here
+          ),
+          child: Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 45.0, bottom: 75, left: 5),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(100),
                   child: Image.network(
-                    provider.profilePhotoUrl,
-                    height: MediaQuery.of(context).size.height * 0.20,
-                    width: double.infinity,
+                    "https://www.shutterstock.com/image-photo/african-american-mom-holding-her-260nw-1937816044.jpg",
+                    width: 110,
+                    height: 180,
                     fit: BoxFit.cover,
                   ),
                 ),
-                const SizedBox(height: 10,),
-                Column(
+              ),
+              SizedBox(width: 20),
+              Expanded(
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      provider.fullName,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                      ),
+                      'Shelly Farmer Javnyuy',
+                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(height: 8),
+                    const SizedBox(height: 10,),
+                    Text(
+                      "Menagere",
+                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      "generale(Maid)",
+                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      "I am: 75 years old"
+                    ),
+                    Text(
+                      "I live in: Total Melen"
+                    ),
+                    const SizedBox(height: 10,),
+                    FitnessButton(
+                        title: "title",
+                        onTap: (){
+                
+                        })
                   ],
                 ),
-                const SizedBox(height: 5,),
-                Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: FitnessButton(
-                      height: 35,
-                      title: LocalKeys.viewProfile.tr,
-                      onTap: () {
-                        Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => SignUpPage()));
-                        // MaterialPageRoute(builder: (context) => ProviderProfilePage(provider: provider,)));
-                      },
-
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          );
-        }).toList(),
+              ),
+              Text('hello mahn')
+            ],
+          ),
+        ),
       ),
     );
+
   }
 }

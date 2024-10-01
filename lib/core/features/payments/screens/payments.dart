@@ -90,8 +90,8 @@ class _PaymentPageState extends State<PaymentPage> {
             ),
             const SizedBox(height: 40),
 
-            const Text(
-              'Select your payment method',
+            Text(
+              LocalKeys.selectPaymentMethod.tr,
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
             ),
             const SizedBox(height: 10),

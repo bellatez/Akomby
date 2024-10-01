@@ -9,6 +9,7 @@ class AppTranslations extends Translations{
 }
 
 class LocalKeys{
+
   static const String tOnboardingTitle1= "tOnboardingTitle1";
   static const String tOnboardingTitle2 = "tOnboardingTitle2";
   static const String tOnboardingTitle3 = "tOnboardingTitle3";
@@ -25,6 +26,7 @@ class LocalKeys{
   static const String unlockPayment = "unlockPayment";
   static const String enterPhoneNumber = "enterPhoneNumber";
   static const String confirmPayment = "confirmPayment";
+  static const String selectPaymentMethod = "selectPaymentMethod";
 }
 
 
@@ -46,6 +48,7 @@ class Locales{
     "unlockPayment": "To unlock contact details, you need to pay:",
     "enterPhoneNumber": "Enter your phone number",
     "confirmPayment": "Confirm Payment",
+    "selectPaymentMethod": "Select your payment method",
 };
 
   static const fr = {
@@ -65,6 +68,8 @@ class Locales{
     "unlockPayment": "Pour débloquer les coordonnées, vous devez payer:",
     "enterPhoneNumber": "Entrez votre numéro de téléphone",
     "confirmPayment": "Confirmer le paiement",
+
+    "selectPaymentMethod": "sélectionnez la méthode de paiement"
   };
 
 }
