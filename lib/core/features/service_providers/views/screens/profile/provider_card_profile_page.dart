@@ -19,12 +19,12 @@ class ProviderProfilePage extends StatelessWidget {
       length: 2, // Number of tabs
       child: Scaffold(
         appBar: AppBar(
-          iconTheme: IconThemeData(color: Colors.black),
-          title: Center(
+          iconTheme: const IconThemeData(color: Colors.black),
+          title: const Center(
             child: Padding(
-              padding: const EdgeInsets.only(right: 82.0),
+              padding: EdgeInsets.only(right: 82.0),
               child: Text(
-                'Profil',
+                'Profile',
                 style: TextStyle(
                   color: ColorConstants.armsColor,
                   fontSize: 25,

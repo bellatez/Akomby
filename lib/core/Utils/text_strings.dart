@@ -10,13 +10,14 @@ class AppTranslations extends Translations{
 
 class LocalKeys{
 
-  static const String tOnboardingTitle1= "tOnboardingTitle1";
+  static const String tOnboardingTitle1 = "tOnboardingTitle1";
   static const String tOnboardingTitle2 = "tOnboardingTitle2";
   static const String tOnboardingTitle3 = "tOnboardingTitle3";
-  static const String tOnboardingSubTitle1 = "tOnboardingSubTitle1";
 
+  static const String tOnboardingSubTitle1 = "tOnboardingSubTitle1";
   static const String tOnboardingSubTitle2 = "tOnboardingSubTitle2";
   static const String tOnboardingSubTitle3 = "tOnboardingSubTitle3";
+
   static const String serviceProviders = "serviceProviders";
   static const String changeLanguage = "changeLanguage";
   static const String viewProfile ="viewProfile";
@@ -53,8 +54,8 @@ class Locales{
     "confirmPayment": "Confirm Payment",
     "selectPaymentMethod": "Select your payment method",
     "viewProfileDetails": "View profile details",
-    "iAm": "I am",
-    "iLiveIn": "I live in",
+    "iAm": "Age",
+    "iLiveIn": "Quarter",
 };
 
   static const fr = {

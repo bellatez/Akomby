@@ -9,7 +9,7 @@ class DataConstants {
   static final pages = [
       OnboardingTileWidget(
         image: tOnboardingImage1,
-        title: LocalKeys.tOnboardingSubTitle1.tr,
+        title: LocalKeys.tOnboardingTitle1.tr,
         subTitle: LocalKeys.tOnboardingSubTitle1.tr,
       ),
 
