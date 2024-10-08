@@ -1,3 +1,4 @@
+import 'package:Akombi/core/common_widgets/fitness_button.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../common_widgets/fitness_text_field.dart';
@@ -12,29 +13,34 @@ class AddProvider extends StatefulWidget {
 class _AddProviderState extends State<AddProvider> {
   final _formKey = GlobalKey<FormState>();
 
-  String? fullName;
-  int? age;
-  String? quarter;
-  String? language;
-  String? stayOption;
-  String? typeOfService;
-  String? profilePhotoUrl;
-  String? description;
-  int? yearsOfExperience;
-  int? homesWorked;
-  bool hasNationalID = false;
 
   // List for the dropdown options
-  final List<String> _languages = ['English', 'French'];
   final List<String> _stayOptions = ['Yes', 'No'];
   final List<String> _services = ['Babysitting', 'Housekeeping', 'Nursing'];
+
+
+  final List<String> _languages = ['English', 'French'];
+  final List<String> _nationalID = ['Yes', 'No'];
+
+
   TextEditingController fullNames = TextEditingController();
-  TextEditingController
+  TextEditingController age = TextEditingController();
+  TextEditingController quarter = TextEditingController();
+  TextEditingController profilePhotoUrl = TextEditingController();
+  TextEditingController description = TextEditingController();
+  TextEditingController yearsOfExperience = TextEditingController();
+
+
+
+  String? _selectedLanguage;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Service Form'),
+        title: Text(
+            'Provider Form',
+          textAlign: TextAlign.center,
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -51,137 +57,91 @@ class _AddProviderState extends State<AddProvider> {
                   maxline: 1, hintText: 'John Doe',
                 ),
                 ProviderInputWidget(
-                  controller: fullNames,
-                  labelText: 'Enter you full names',
+                  controller: age,
+                  labelText: 'Enter you Age',
+                  textInputType: TextInputType.number,
+                  maxline: 1, hintText: '25',
+                ),
+
+                ProviderInputWidget(
+                  controller: quarter,
+                  labelText: 'Enter you Quarter',
                   textInputType: TextInputType.text,
-                  maxline: 1, hintText: 'John Doe',
+                  maxline: 1, hintText: 'Simbock',
                 ),
 
-                SizedBox(height: 16),
+                ProviderInputWidget(
+                  controller: profilePhotoUrl,
+                  labelText: 'Enter Phot Url',
+                  textInputType: TextInputType.text,
+                  maxline: 1, hintText: 'https:///',
+                ),
 
-                // Quarter
-                TextFormField(
-                  decoration: InputDecoration(labelText: 'Quarter'),
-                  onChanged: (value) {
-                    quarter = value;
+                ProviderInputWidget(
+                  controller: profilePhotoUrl,
+                  labelText: 'Years of Experience',
+                  textInputType: TextInputType.text,
+                  maxline: 1, hintText: '05',
+                ),
+
+
+                ProviderInputWidget(
+                  controller: profilePhotoUrl,
+                  labelText: 'Homes Worked',
+                  textInputType: TextInputType.text,
+                  maxline: 1, hintText: '02',
+                ),
+
+                CustomDropdownWidget(
+                    labelText: "Select your Langage",
+                    items: _languages,
+                    onChanged: (value) {
+                      setState(() {
+                        _selectedLanguage = value;
+                      });
                   },
-                ),
-                SizedBox(height: 16),
+                    ),
 
-                // Language Dropdown
-                DropdownButtonFormField(
-                  decoration: InputDecoration(labelText: 'Language'),
-                  items: _languages.map((language) {
-                    return DropdownMenuItem(
-                      value: language,
-                      child: Text(language),
-                    );
-                  }).toList(),
+                CustomDropdownWidget(
+                  labelText: "Has National ID",
+                  items: _nationalID,
                   onChanged: (value) {
                     setState(() {
-                      language = value as String?;
+                      _selectedLanguage = value;
                     });
                   },
                 ),
-                SizedBox(height: 16),
 
-                // Stay Option Dropdown
-                DropdownButtonFormField(
-                  decoration: InputDecoration(labelText: 'Stay Option'),
-                  items: _stayOptions.map((stayOption) {
-                    return DropdownMenuItem(
-                      value: stayOption,
-                      child: Text(stayOption),
-                    );
-                  }).toList(),
+                CustomDropdownWidget(
+                  labelText: "Stay Option",
+                  items: _stayOptions,
                   onChanged: (value) {
                     setState(() {
-                      stayOption = value as String?;
+                      _selectedLanguage = value;
                     });
                   },
                 ),
-                SizedBox(height: 16),
 
-                // Type of Service Dropdown
-                DropdownButtonFormField(
-                  decoration: InputDecoration(labelText: 'Type of Service'),
-                  items: _services.map((service) {
-                    return DropdownMenuItem(
-                      value: service,
-                      child: Text(service),
-                    );
-                  }).toList(),
+                CustomDropdownWidget(
+                  labelText: "Type of Service",
+                  items: _services,
                   onChanged: (value) {
                     setState(() {
-                      typeOfService = value as String?;
+                      _selectedLanguage = value;
                     });
                   },
                 ),
-                SizedBox(height: 16),
 
-                // Years of Experience
-                TextFormField(
-                  decoration: InputDecoration(labelText: 'Years of Experience'),
-                  keyboardType: TextInputType.number,
-                  onChanged: (value) {
-                    yearsOfExperience = int.tryParse(value);
-                  },
+                ProviderInputWidget(
+                  controller: profilePhotoUrl,
+                  labelText: 'Description',
+                  textInputType: TextInputType.text,
+                  maxline: 4, hintText: 'I have over .........',
                 ),
-                SizedBox(height: 16),
 
-                // Homes Worked
-                TextFormField(
-                  decoration: InputDecoration(labelText: 'Number of Homes Worked'),
-                  keyboardType: TextInputType.number,
-                  onChanged: (value) {
-                    homesWorked = int.tryParse(value);
-                  },
-                ),
-                SizedBox(height: 16),
+                FitnessButton(title: "Add", onTap: (){
 
-                // National ID Checkbox
-                CheckboxListTile(
-                  title: Text('Has National ID'),
-                  value: hasNationalID,
-                  onChanged: (bool? value) {
-                    setState(() {
-                      hasNationalID = value!;
-                    });
-                  },
-                ),
-                SizedBox(height: 16),
-
-                // Description
-                TextFormField(
-                  decoration: InputDecoration(labelText: 'Description'),
-                  maxLines: 3,
-                  onChanged: (value) {
-                    description = value;
-                  },
-                ),
-                SizedBox(height: 16),
-
-                // Profile Photo URL
-                TextFormField(
-                  decoration: InputDecoration(labelText: 'Profile Photo URL'),
-                  onChanged: (value) {
-                    profilePhotoUrl = value;
-                  },
-                ),
-                SizedBox(height: 32),
-
-                // Submit Button
-                Center(
-                  child: ElevatedButton(
-                    onPressed: () {
-                      if (_formKey.currentState!.validate()) {
-                        // Perform form submission or navigation
-                        print("Form Submitted");
-                      }
-                    },
-                    child: Text('Submit'),
-                  ),
-                ),
+                })
               ],
             ),
           ),
