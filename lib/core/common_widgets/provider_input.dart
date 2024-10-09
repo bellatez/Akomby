@@ -34,7 +34,7 @@ class ProviderInputWidget extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
               ),
               filled: true,
-              fillColor: Colors.grey[200],  // Light grey background
+              fillColor: Colors.white
             ),
             keyboardType: TextInputType.number,
           ),
@@ -71,7 +71,7 @@ class CustomDropdownWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
           ),
           filled: true,
-          fillColor: Colors.grey[200],  // Customizing background
+          fillColor: Colors.white
         ),
         value: selectedValue,
         items: items.map((item) {

@@ -29,13 +29,14 @@ class _AddProviderState extends State<AddProvider> {
   TextEditingController profilePhotoUrl = TextEditingController();
   TextEditingController description = TextEditingController();
   TextEditingController yearsOfExperience = TextEditingController();
-
+  TextEditingController homesWork = TextEditingController();
 
 
   String? _selectedLanguage;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
             'Provider Form',
@@ -52,7 +53,7 @@ class _AddProviderState extends State<AddProvider> {
               children: [
                 ProviderInputWidget(
                   controller: fullNames,
-                  labelText: 'Enter you full names',
+                  labelText: 'Enter your full names',
                   textInputType: TextInputType.text,
                   maxline: 1, hintText: 'John Doe',
                 ),
@@ -78,7 +79,7 @@ class _AddProviderState extends State<AddProvider> {
                 ),
 
                 ProviderInputWidget(
-                  controller: profilePhotoUrl,
+                  controller: yearsOfExperience,
                   labelText: 'Years of Experience',
                   textInputType: TextInputType.text,
                   maxline: 1, hintText: '05',
@@ -86,7 +87,7 @@ class _AddProviderState extends State<AddProvider> {
 
 
                 ProviderInputWidget(
-                  controller: profilePhotoUrl,
+                  controller: homesWork,
                   labelText: 'Homes Worked',
                   textInputType: TextInputType.text,
                   maxline: 1, hintText: '02',

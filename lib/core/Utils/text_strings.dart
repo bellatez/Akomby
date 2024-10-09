@@ -56,7 +56,7 @@ class Locales{
     "viewProfileDetails": "View profile details",
     "iAm": "Age",
     "iLiveIn": "Quarter",
-};
+ };
 
   static const fr = {
     "tOnboardingTitle1": "Accédez à de nombreuses aides",

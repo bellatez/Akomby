@@ -7,9 +7,9 @@ class ProviderModel {
   String typeOfService;
   String profilePhotoUrl;
   String description;
-  int yearsOfExperience; // New field
-  int homesWorked;       // New field
-  bool hasNationalID;    // New field
+  int yearsOfExperience;
+  int homesWorked;
+  bool hasNationalID;
 
   ProviderModel({
     required this.fullName,
@@ -20,8 +20,8 @@ class ProviderModel {
     required this.typeOfService,
     required this.profilePhotoUrl,
     required this.description,
-    required this.yearsOfExperience, // New field
-    required this.homesWorked,       // New field
-    required this.hasNationalID,      // New field
+    required this.yearsOfExperience,
+    required this.homesWorked,
+    required this.hasNationalID,
   });
 }
