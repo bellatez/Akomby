@@ -1,9 +1,9 @@
 import 'package:Akombi/core/common_widgets/fitness_button.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../common_widgets/fitness_text_field.dart';
-import '../../../../../common_widgets/provider_input.dart';
-import '../../../../../common_widgets/settings_textfield.dart';
+import '../../../../common_widgets/fitness_text_field.dart';
+import '../../../../common_widgets/provider_input.dart';
+import '../../../../common_widgets/settings_textfield.dart';
 
 class AddProvider extends StatefulWidget {
   @override
@@ -73,7 +73,7 @@ class _AddProviderState extends State<AddProvider> {
 
                 ProviderInputWidget(
                   controller: profilePhotoUrl,
-                  labelText: 'Enter Phot Url',
+                  labelText: 'Enter Photo Url',
                   textInputType: TextInputType.text,
                   maxline: 1, hintText: 'https:///',
                 ),
