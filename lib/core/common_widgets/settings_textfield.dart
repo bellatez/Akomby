@@ -85,14 +85,6 @@ class _SettingsTextFieldState extends State<SettingsTextField> {
           stateObscureText = !stateObscureText;
         });
       },
-      // child: Image(
-      //   image: AssetImage(
-      //     PathConstants.eye,
-      //   ),
-      //   color: widget.controller.text.isNotEmpty
-      //       ? tPrimaryColor
-      //       : ColorConstants.grey,
-      // ),
     );
   }
 }
