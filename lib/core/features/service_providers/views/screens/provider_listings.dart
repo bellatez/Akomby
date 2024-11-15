@@ -55,7 +55,8 @@ class _ProviderListingsState extends State<ProviderListings>
           IconButton(
               onPressed: () {},
               icon: const Icon(Icons.feedback_rounded,
-                  color: ColorConstants.white)),
+                  color: ColorConstants.white)
+          ),
           IconButton(
               onPressed: () {},
               icon: const Icon(

@@ -2,9 +2,47 @@
   "project_info": {
     "project_number": "439801108829",
     "project_id": "akomby-249bf",
-    "storage_bucket": "akomby-249bf.appspot.com"
+    "storage_bucket": "akomby-249bf.firebasestorage.app"
   },
   "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:439801108829:android:eec272eb81e4c0077470b4",
+        "android_client_info": {
+          "package_name": "com.Akomby.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSB9wqIYwjl8SFcVATn1_F9NlXBoWZNFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:439801108829:android:c9813a6ee36e8a2e7470b4",
+        "android_client_info": {
+          "package_name": "com.example.akomby"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSB9wqIYwjl8SFcVATn1_F9NlXBoWZNFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
     {
       "client_info": {
         "mobilesdk_app_id": "1:439801108829:android:96e620db6c92b3ca7470b4",
