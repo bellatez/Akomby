@@ -6,13 +6,11 @@ import '../../../../../constants/colors.dart';
 import '../../../models/provider_model.dart';
 
 class ProviderProfilePage extends StatelessWidget {
-  final ProviderModel provider;
 
-  const ProviderProfilePage({
-    super.key,
-    required this.provider,
-  });
-
+  ProviderProfilePage({
+    required this.provider
+});
+  ProviderModel provider;
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -100,7 +98,9 @@ class ProviderProfilePage extends StatelessWidget {
               Expanded(
                 child: TabBarView(
                   children: [
-                    About(provider: provider),
+                    About(
+                        provider: provider
+                    ),
                     Services(),
                   ],
                 ),

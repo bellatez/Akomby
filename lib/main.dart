@@ -7,12 +7,15 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get_storage/get_storage.dart';
 
 import 'core/features/payments/screens/payments.dart';
+import 'core/features/service_providers/controller/nannies.dart';
 import 'firebase_options.dart';
+import './helper/init_controllers.dart' as di;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
   WidgetsFlutterBinding.ensureInitialized();
+  await init();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
@@ -39,4 +42,12 @@ class MyApp extends StatelessWidget {
       // home: ProviderListings(),
     );
   }
+}
+
+
+
+
+
+Future<void> init() async {
+  Get.put(ProviderNanniesController());
 }

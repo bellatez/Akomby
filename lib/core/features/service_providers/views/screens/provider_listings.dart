@@ -2,11 +2,14 @@ import 'dart:core';
 
 import 'package:Akombi/core/Utils/text_strings.dart';
 import 'package:Akombi/core/constants/colors.dart';
+import 'package:Akombi/core/features/service_providers/controller/nannies.dart';
 import 'package:Akombi/core/features/service_providers/models/provider_model.dart';
 import 'package:Akombi/core/features/service_providers/models/providers_data.dart';
 import 'package:Akombi/core/features/service_providers/views/screens/provider_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import 'addNanny.dart';
 
 class ProviderListings extends StatefulWidget {
   @override
@@ -22,8 +25,11 @@ class _ProviderListingsState extends State<ProviderListings>
   List<ProviderModel> Maids = [];
   List<ProviderModel> Nannies = [];
 
+  ProviderNanniesController controller = Get.find();
   @override
   void initState() {
+    controller.providers();
+    controller.fetchProviders();
     // TODO: implement initState
     super.initState();
     _serviceProviderTabController = TabController(length: 2, vsync: this);
@@ -84,15 +90,28 @@ class _ProviderListingsState extends State<ProviderListings>
         ListView.builder(
             itemCount: Nannies.length,
             itemBuilder: (context, index) {
-              return ProviderCard(providers: Nannies, index: index);
+              return ProviderCard();
             }),
 
         ListView.builder(
             itemCount: Maids.length,
             itemBuilder: (context, index) {
-              return ProviderCard(providers: Maids, index: index);
+              return ProviderCard(
+                  // providers: Maids, index: index
+                  );
             }),
       ]),
+
+      floatingActionButton: FloatingActionButton(
+          backgroundColor: ColorConstants.tPrimaryColor,
+          shape: CircleBorder(),
+          child: Icon(
+            Icons.add,
+              color: Colors.white,
+          ),
+          onPressed: (){
+            Get.to(() => ProviderNaniesAddPage());
+          }),
     );
   }
 }
