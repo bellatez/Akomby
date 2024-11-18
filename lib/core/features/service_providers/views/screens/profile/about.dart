@@ -5,8 +5,8 @@ import '../../../../../common_widgets/fitness_button.dart';
 import '../../../models/provider_model.dart';
 
 class About extends StatelessWidget {
-  // const About({super.key, required this.provider});
-  // final ProviderModel provider;
+  const About({super.key, required this.provider});
+  final ProviderModel provider;
 
   @override
   Widget build(BuildContext context) {
@@ -22,9 +22,9 @@ class About extends StatelessWidget {
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height:5.0),
-                const Text(
+                Text(
                   textAlign: TextAlign.justify,
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                  provider.description
                 ),
                 const SizedBox(height: 15,),
                 Padding(
@@ -35,32 +35,32 @@ class About extends StatelessWidget {
                       AboutItems(
                         iconData: Icons.location_on,
                         title: 'Lives in',
-                        subTitle: 'provider.quarter',
+                        subTitle: provider.quarter,
                       ),
                       AboutItems(
                         iconData: Icons.calendar_month,
                         title: 'Age',
-                        subTitle: 'provider.age.toString()',
+                        subTitle: provider.age.toString(),
                       ),
                       AboutItems(
                         iconData: Icons.work_history,
                         title: 'Years of Experience',
-                        subTitle: 'provider.yearsOfExperience.toString()',
+                        subTitle: provider.yearsOfExperience.toString(),
                       ),
                       AboutItems(
                         iconData: Icons.home,
                         title: 'Homes Worked',
-                        subTitle: 'provider.homesWorked.toString()',
+                        subTitle: provider.homesWorked.toString(),
                       ),
                       AboutItems(
                         iconData: Icons.card_membership,
                         title: 'National ID',
-                        subTitle: "provider.hasNationalID ? 'Yes' : 'No'",
+                        subTitle: provider.hasNationalID ? 'Yes' : 'No',
                       ),
                       AboutItems(
                         iconData: Icons.language,
                         title: 'Languages spoken',
-                        subTitle: 'provider.language',
+                        subTitle: provider.language,
                       ),
 
                     ],

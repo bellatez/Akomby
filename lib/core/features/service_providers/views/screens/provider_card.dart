@@ -39,9 +39,9 @@ class ProviderCard extends StatelessWidget {
                 final provider = controller.providers[index];
                 return InkWell(
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => ProviderProfilePage(
-                        // provider: providers[index]
-                    )));
+                    Get.to(() => ProviderProfilePage(
+                      provider: provider
+                    ));
                   },
                   child:  Card(
                     elevation: 8.0,
