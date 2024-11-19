@@ -50,4 +50,5 @@ class MyApp extends StatelessWidget {
 
 Future<void> init() async {
   Get.put(ProviderNanniesController());
+  Get.put(NannyToggle());
 }

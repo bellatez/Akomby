@@ -35,3 +35,13 @@ class ProviderNanniesController extends GetxController{
     }
   }
 }
+
+
+
+class NannyToggle extends GetxController{
+  RxBool hasNationalID = false.obs;
+
+  void toggleNationalID(bool value){
+    hasNationalID.value = value;
+  }
+}
