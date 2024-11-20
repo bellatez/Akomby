@@ -15,10 +15,10 @@ class ProviderNanniesController extends GetxController{
   @override
   void onInit() {
     // TODO: implement onInit
-    fetchProviders();
+    fetchProviderNanny();
     super.onInit();
   }
-  Future<void> fetchProviders() async{
+  Future<void> fetchProviderNanny() async{
     try{
       isLoading(true);
       final snapshot = await FirebaseFirestore.instance.collection(nanniesCollection).get();
@@ -32,6 +32,18 @@ class ProviderNanniesController extends GetxController{
       Get.snackbar("Error", "Failed to fetch data");
     } finally {
       isLoading(false);
+    }
+  }
+
+  Future<void> addProviderNanny(ProviderModel model) async{
+    try{
+      awi
+    } catch(e){
+      Get.snackbar("Error", "Failed to add provider");
+      log("Error: $e");
+
+    } finally{
+      isLoading.value = false;
     }
   }
 }

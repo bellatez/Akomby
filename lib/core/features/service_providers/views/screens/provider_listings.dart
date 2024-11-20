@@ -29,7 +29,7 @@ class _ProviderListingsState extends State<ProviderListings>
   @override
   void initState() {
     controller.providers();
-    controller.fetchProviders();
+    controller.fetchProviderNanny();
     // TODO: implement initState
     super.initState();
     _serviceProviderTabController = TabController(length: 2, vsync: this);
