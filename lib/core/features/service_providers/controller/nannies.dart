@@ -15,16 +15,17 @@ class ProviderNanniesController extends GetxController{
   @override
   void onInit() {
     // TODO: implement onInit
-    fetchProviders();
+    fetchProviderNanny();
     super.onInit();
   }
-  Future<void> fetchProviders() async{
+  Future<void> fetchProviderNanny() async{
     try{
       isLoading(true);
-      final snapshot = await FirebaseFirestore.instance.collection(nanniesCollection).get();
-      providers.value = snapshot.docs
-                        .map((doc) => ProviderModel.fromJson(doc.data()))
-                        .toList();
+      final snapshot = await FirebaseFirestore.instance.collection(nanniesCollection).snapshots().listen((snapshot){
+        providers.value = snapshot.docs
+            .map((doc) => ProviderModel.fromJson(doc.data()))
+            .toList();
+      });
       Get.snackbar("Success", "Gotten the results");
       log("Result are: ${providers.value}");
     } catch(e){
@@ -32,6 +33,22 @@ class ProviderNanniesController extends GetxController{
       Get.snackbar("Error", "Failed to fetch data");
     } finally {
       isLoading(false);
+    }
+  }
+
+  Future<void> addProviderNanny(ProviderModel provider) async{
+    try{
+      isLoading.value = true;
+      await FirebaseFirestore.instance.collection(nanniesCollection).add(provider.toJson());
+
+      Get.snackbar("Success", "Provider Added Successfully");
+
+    } catch(e){
+      Get.snackbar("Error", "Failed to add provider");
+      log("Error: $e");
+
+    } finally{
+      isLoading.value = false;
     }
   }
 }

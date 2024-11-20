@@ -1,5 +1,7 @@
 import 'package:Akombi/core/constants/colors.dart';
 import 'package:Akombi/core/features/service_providers/controller/nannies.dart';
+import 'package:Akombi/core/features/service_providers/models/provider_model.dart';
+import 'package:Akombi/core/features/service_providers/views/screens/profile/provider_card_profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -20,6 +22,8 @@ class ProviderNaniesAddPage extends StatelessWidget {
   final TextEditingController yearsOfExperienceController = TextEditingController();
   final TextEditingController homesWorkedController = TextEditingController();
   bool hasNationalID = false;
+  ProviderNanniesController controller = Get.find<ProviderNanniesController>();
+  NannyToggle controllerNanny = Get.find<NannyToggle>();
 
   void saveNanny(BuildContext context) {
     if (fullNameController.text.isEmpty ||
@@ -36,15 +40,25 @@ class ProviderNaniesAddPage extends StatelessWidget {
         SnackBar(content: Text('Please fill all fields')),
       );
       return;
+    } else {
+      final providerAdd = ProviderModel(
+          fullName: fullNameController.text.trim(),
+          age: int.parse(ageController.text.trim()),
+          quarter: quarterController.text.trim(),
+          language: languageController.text.trim(),
+          stayOption: stayOptionController.text.trim(),
+          typeOfService: typeOfServiceController.text.trim(),
+          profilePhotoUrl: profilePhotoUrlController.text.trim(),
+          description: descriptionController.text.trim(),
+          yearsOfExperience: int.parse(yearsOfExperienceController.text.trim()),
+          homesWorked: int.parse(homesWorkedController.text.trim()),
+          hasNationalID: hasNationalID,
+      );
+      controller.addProviderNanny(providerAdd);
+      Get.back();
     }
-
-    // Logic for saving data to Firebase or other logic can go here.
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('Nanny added successfully!')),
-    );
   }
 
-  NannyToggle controllerNanny = Get.find<NannyToggle>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(

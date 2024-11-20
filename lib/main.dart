@@ -12,9 +12,9 @@ import 'firebase_options.dart';
 import './helper/init_controllers.dart' as di;
 
 void main() async {
+
   WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
-  WidgetsFlutterBinding.ensureInitialized();
   await init();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
