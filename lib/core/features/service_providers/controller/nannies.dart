@@ -12,7 +12,6 @@ class ProviderNanniesController extends GetxController{
   String nanniesCollection = "ProviderNannies";
 
   @override
-  @override
   void onInit() {
     // TODO: implement onInit
     fetchProviderNanny();
