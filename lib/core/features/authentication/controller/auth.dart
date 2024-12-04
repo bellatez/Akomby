@@ -22,6 +22,7 @@ class AuthController extends GetxController{
 Future<void> register(String email, String password) async {
     try {
       await auth.createUserWithEmailAndPassword(email: email, password: password);
+      Get.snackbar("Success", "Registe successful");
     } catch (e){
       Get.snackbar("Error", e.toString());
     }
@@ -29,6 +30,21 @@ Future<void> register(String email, String password) async {
 
   // Login a user.
   Future<void> login(String email, String password) async {
+    try {
+      await auth.signInWithEmailAndPassword(email: email, password: password);
+      Get.snackbar("Success", "Login successful");
 
+    } catch (e){
+      Get.snackbar("Error", e.toString());
+    }
+  }
+
+  // Logout
+  Future<void> logout() async{
+    try {
+      await auth.signOut();
+    } catch (e){
+      Get.snackbar("Error", e.toString());
+    }
   }
 }

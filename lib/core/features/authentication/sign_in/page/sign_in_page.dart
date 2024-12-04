@@ -2,8 +2,11 @@ import 'package:Akombi/core/features/authentication/sign_up/page/sign_up_page.da
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'package:Akombi/core/common_widgets/fitness_button.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import '../../../../common_widgets/fitness_text_field.dart';
+import '../../controller/auth.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({Key? key}) : super(key: key);
@@ -13,6 +16,17 @@ class SignInPage extends StatelessWidget {
     final TextEditingController emailController = TextEditingController();
     final TextEditingController passwordController = TextEditingController();
 
+    AuthController controller = Get.find();
+    SignInLogic() {
+      final email = emailController.text.trim();
+      final password = emailController.text.trim();
+
+      if (email.isEmpty || password.isEmpty){
+        Get.snackbar("Error", "Please fill all fields");
+      }
+
+      controller.login(email, password);
+    }
     return SafeArea(
       child: Scaffold(
         body: Stack(
@@ -72,7 +86,7 @@ class SignInPage extends StatelessWidget {
                   FitnessButton(
                     title: "Sign In",
                     onTap: () {
-                      // Handle sign-in logic
+                      SignInLogic();
                     },
                   ),
                 ],
