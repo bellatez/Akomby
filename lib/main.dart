@@ -1,5 +1,6 @@
 import 'package:Akombi/core/Utils/text_strings.dart';
 import 'package:Akombi/core/features/Onboarding/views/screens/onboarding_screen.dart';
+import 'package:Akombi/core/features/authentication/controller/auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -51,4 +52,5 @@ class MyApp extends StatelessWidget {
 Future<void> init() async {
   Get.put(ProviderNanniesController());
   Get.put(NannyToggle());
+  Get.put(AuthController());
 }

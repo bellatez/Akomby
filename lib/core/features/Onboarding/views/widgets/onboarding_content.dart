@@ -1,6 +1,9 @@
+import 'package:Akombi/core/features/authentication/sign_in/page/sign_in_page.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
 import 'package:Akombi/core/constants/colors.dart';
@@ -78,7 +81,8 @@ class OnboardingContentWidget extends StatelessWidget {
                     child: RawMaterialButton(
                       shape: const CircleBorder(),
                       onPressed: () {
-                        bloc.add(PageChangedEvent());
+                        // bloc.add(PageChangedEvent());
+                        Get.to(() => SignInPage());
                       },
                       child: const Padding(
                         padding: EdgeInsets.all(10.0),
