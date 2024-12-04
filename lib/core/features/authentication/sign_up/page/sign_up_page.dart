@@ -3,6 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'package:Akombi/core/common_widgets/fitness_button.dart';
 
 import '../../../../common_widgets/fitness_text_field.dart';
+import '../../sign_in/page/sign_in_page.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({Key? key}) : super(key: key);
@@ -105,7 +106,7 @@ class SignUpPage extends StatelessWidget {
                             Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                builder: (_) => SignInPage(), // Replace with SignUpPage
+                                builder: (_) => SignInPage(),
                               ),
                             );
                           },

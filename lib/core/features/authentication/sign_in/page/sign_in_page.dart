@@ -1,3 +1,4 @@
+import 'package:Akombi/core/features/authentication/sign_up/page/sign_up_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'package:Akombi/core/common_widgets/fitness_button.dart';
@@ -105,7 +106,7 @@ class SignInPage extends StatelessWidget {
                             Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                builder: (_) => SignInPage(), // Replace with SignUpPage
+                                builder: (_) => SignUpPage(), // Replace with SignUpPage
                               ),
                             );
                           },
